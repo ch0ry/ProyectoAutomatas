@@ -16,6 +16,8 @@ class TMConfiguration(collections.namedtuple(
             self.__class__.__name__, self.state, self.tape
         )
 
+
+
     def print(self):
         """Print the machine's current configuration in a readable form."""
         print('{current_state}: {tape}\n{current_position}'.format(

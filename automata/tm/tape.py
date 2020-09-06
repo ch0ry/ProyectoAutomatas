@@ -21,6 +21,13 @@ class TMTape(collections.namedtuple(
             cls, tape, blank_symbol, current_position
         )
 
+    def getTape(self):
+        tape = list()
+        for character in self.tape:
+            if character is not '#':
+                tape.append(character)
+        return ''.join(tape)
+
     def read_symbol(self):
         """Read the symbol at the current position in the tape."""
         return self.tape[self.current_position]
