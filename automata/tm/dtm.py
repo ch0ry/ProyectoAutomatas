@@ -133,3 +133,10 @@ class DTM(tm.TM):
                 current_configuration
             )
             yield current_configuration
+
+    def input_tape(self, input_str):
+        tape = self.read_input(input_str)
+        tape = tape[1].getTape()
+        return tape
+
+
