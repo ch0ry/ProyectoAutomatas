@@ -24,7 +24,7 @@ class TMTape(collections.namedtuple(
     def getTape(self):
         tape = list()
         for character in self.tape:
-            if character is not '#':
+            if character != '#':
                 tape.append(character)
         return ''.join(tape)
 
